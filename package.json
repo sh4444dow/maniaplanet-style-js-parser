@@ -1,8 +1,9 @@
 {
-	"name": "maniaplanet-style-js-parser",
-	"version": "0.2.0",
+	"name": "@sh4444dow/maniaplanet-style-js-parser",
+	"version": "0.1.0",
 	"author": "Baptiste Lafontaine <baptiste@nadeo.com>",
 	"description": "Maniaplanet style parser",
+	"main" : "docs/bin/mp-style-parser.js",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/maniaplanet/maniaplanet-style-js-parser.git"
@@ -14,11 +15,11 @@
 	],
 	"dependencies": {},
 	"devDependencies": {
-		"coffeescript": "~1.7",
-		"mocha": "~2.5",
-		"chai": "~3.5",
 		"browserify": "~13.0",
-		"coffeeify": "~2.0"
+		"chai": "~3.5",
+		"coffeeify": "~2.0",
+		"coffeescript": "~1.7",
+		"mocha": "^5.2.0"
 	},
 	"license": "LGPL-3.0",
 	"engines": {
@@ -26,6 +27,6 @@
 	},
 	"scripts": {
 		"test": "mocha --compilers coffee:coffeescript/register",
-        "build": "cake browserify"
+		"build": "cake browserify"
 	}
 }
