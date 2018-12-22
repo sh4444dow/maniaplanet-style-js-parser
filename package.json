@@ -1,6 +1,6 @@
 {
 	"name": "@sh4444dow/maniaplanet-style-js-parser",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"author": "Baptiste Lafontaine <baptiste@nadeo.com>",
 	"description": "Maniaplanet style parser",
 	"main" : "docs/bin/mp-style-parser.js",
