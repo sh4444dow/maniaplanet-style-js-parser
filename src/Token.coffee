@@ -17,6 +17,8 @@ class Token
         else if (color.length == 4)
           color = '00' + color
         styleStack.push 'color: #' + color + ';'
+        if (color == '000000')
+          styleStack.push 'font-weight:bold;text-shadow: -1px 0 0 rgba(255, 255, 255, 0.4), 0 1px 0 rgba(255, 255, 255, 0.4), 1px 0 0 rgba(255, 255, 255, 0.4), 0 -1px 0 rgba(255, 255, 255, 0.4);'
       if @style & Style.ITALIC
         styleStack.push 'font-style:italic;'
       if @style & Style.BOLD
@@ -24,9 +26,9 @@ class Token
       if @style & Style.SHADOWED
         styleStack.push 'text-shadow:1px 1px 1px rgba(0, 0, 0, 0.5);'
       if @style & Style.WIDE
-        styleStack.push 'letter-spacing:.1em;font-size:105%;'
+        styleStack.push 'font-weight:800;font-size:105%;'
       else if @style & Style.NARROW
-        styleStack.push 'letter-spacing:-.1em;font-size:95%;'
+        styleStack.push 'font-weight:500;font-size:95%;'
       return '<span style="' + styleStack.join(' ') + '">' + @text + '</span>'
     else
       return @text
